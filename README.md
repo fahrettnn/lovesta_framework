@@ -1,4 +1,5 @@
 🚀 Lovesta Framework
+
 Lovesta, modern PHP uygulamaları geliştirmek için tasarlanmış hafif, esnek ve modüler bir PHP Framework'üdür. 💖 Model-View-Controller (MVC) mimari deseni üzerine kurulu olan Lovesta, güçlü bir Bağımlılık Enjeksiyon (Dependency Injection) konteynerı, sezgisel bir yönlendirme sistemi, modüler eklenti yapısı ve kapsamlı CLI araçları ile geliştiricilere hızlı ve düzenli bir geliştirme ortamı sunar. Lovesta'nın temel amacı, geliştirme sürecini kolaylaştırmak, kod tekrarını azaltmak ve projenin ölçeklenebilirliğini artırmaktır.
 
 ✨ Özellikler
