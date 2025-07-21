@@ -1,7 +1,7 @@
-Lovesta Framework
-Lovesta, modern PHP uygulamaları geliştirmek için tasarlanmış hafif, esnek ve modüler bir PHP Framework'üdür. Model-View-Controller (MVC) mimari deseni üzerine kurulu olan Lovesta, güçlü bir bağımlılık enjeksiyon (Dependency Injection) container'ı, sezgisel bir yönlendirme sistemi, modüler eklenti yapısı ve kapsamlı CLI araçları ile geliştiricilere hızlı ve düzenli bir geliştirme ortamı sunar. Lovesta'nın temel amacı, geliştirme sürecini kolaylaştırmak, kod tekrarını azaltmak ve projenin ölçeklenebilirliğini artırmaktır.
+🚀 Lovesta Framework
+Lovesta, modern PHP uygulamaları geliştirmek için tasarlanmış hafif, esnek ve modüler bir PHP Framework'üdür. 💖 Model-View-Controller (MVC) mimari deseni üzerine kurulu olan Lovesta, güçlü bir Bağımlılık Enjeksiyon (Dependency Injection) konteynerı, sezgisel bir yönlendirme sistemi, modüler eklenti yapısı ve kapsamlı CLI araçları ile geliştiricilere hızlı ve düzenli bir geliştirme ortamı sunar. Lovesta'nın temel amacı, geliştirme sürecini kolaylaştırmak, kod tekrarını azaltmak ve projenin ölçeklenebilirliğini artırmaktır.
 
-Özellikler
+✨ Özellikler
 MVC Mimarisi: Temiz kod organizasyonu ve sorumluluk ayrımı.
 
 Bağımlılık Enjeksiyonu (PHP-DI): Servislerin kolay yönetimi ve test edilebilir kod.
@@ -18,18 +18,18 @@ Migration Sistemi: Veritabanı şema değişikliklerini kolayca yönetme.
 
 CLI Araçları: Bileşen oluşturma (make:), veritabanı migration'ları (migrate:) gibi yaygın görevleri otomatikleştiren güçlü komutlar.
 
-Çıktı Tamponlama ile Görünüm Yönetimi: Performanslı ve esnek görünüm işleme.
+Gelişmiş Görünüm Yönetimi: Performanslı ve esnek çıktı tamponlama tabanlı şablonlama.
 
 Ortam Değişkeni Yönetimi (.env): Konfigürasyonun güvenli ve kolay yönetimi.
 
 Hata Ayıklama (Tracy Debugger): Kapsamlı hata raporlama ve ayıklama araçları.
 
-İçindekiler
-Gereksinimler
+📚 İçindekiler
+📦 Gereksinimler
 
-Kurulum
+🚀 Kurulum
 
-Kullanım
+💻 Kullanım
 
 3.1. Uygulama Yapısı
 
@@ -43,7 +43,7 @@ Kullanım
 
 3.6. Migration Kullanımı
 
-Eklenti Geliştirme
+🔌 Eklenti Geliştirme
 
 4.1. Yeni Eklenti Oluşturma
 
@@ -51,49 +51,54 @@ Eklenti Geliştirme
 
 4.3. Ortak Alanlara İçerik Ekleme (Action/Filter)
 
-CLI Komutları
+⚙️ CLI Komutları
 
-Katkıda Bulunma
+🤝 Katkıda Bulunma
 
-Lisans
+📄 Lisans
 
-1. Gereksinimler
-PHP 8.0 veya üzeri
+1. 📦 Gereksinimler
+Lovesta Framework'ü çalıştırmak için aşağıdaki gereksinimlere sahip olmanız gerekir:
 
-Composer
+PHP: 8.0 veya üzeri
 
-MySQL veritabanı
+Composer: Bağımlılık yönetimi için
 
-Apache veya Nginx gibi bir web sunucusu (URL yeniden yazma/rewrite modülü etkin olmalı)
+MySQL: Veritabanı sistemi
 
-2. Kurulum
+Web Sunucusu: Apache (mod_rewrite etkin) veya Nginx
+
+2. 🚀 Kurulum
+Aşağıdaki adımları takip ederek Lovesta projesini hızlıca ayağa kaldırabilirsiniz:
+
 Projeyi Klonlayın veya İndirin:
 
 Bash
 
-git clone [repo_url] lovesta-app
-cd lovesta-app
+git clone https://github.com/YourUsername/lovesta-framework.git my-lovesta-app
+cd my-lovesta-app
 (Eğer Git kullanmıyorsanız, proje dosyalarını doğrudan web sunucunuzun belge köküne kopyalayın.)
 
 Composer Bağımlılıklarını Yükleyin:
+Proje kök dizininde aşağıdaki komutu çalıştırın:
 
 Bash
 
 composer install
 Ortam Ayarlarını Yapılandırın:
 
-.env.example dosyasını kopyalayarak .env` adında yeni bir dosya oluşturun:
+.env.example dosyasını .env` olarak kopyalayın:
 
 Bash
 
 cp .env.example .env
-.env dosyasını açın ve veritabanı bağlantı bilgilerini, APP_DEBUG ayarını ve diğer gerekli ortam değişkenlerini kendi ortamınıza göre düzenleyin.
+.env dosyasını açın ve aşağıdaki temel değişkenleri kendi ortamınıza göre güncelleyin:
 
 Kod snippet'i
 
-APP_NAME=MyLovestaApp
+APP_NAME=MyAwesomeLovestaApp
 APP_ENV=local
-APP_DEBUG=true
+APP_DEBUG=true # Geliştirme için true, üretim için false
 
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
@@ -102,21 +107,21 @@ DB_DATABASE=your_database_name
 DB_USERNAME=your_username
 DB_PASSWORD=your_password
 Web Sunucusu Yapılandırması:
-
-Web sunucunuzu (Apache veya Nginx), projenizin public dizinini belge kökü (document root) olarak işaretleyecek şekilde yapılandırın. .htaccess dosyası URL yeniden yazma için zaten public dizini içinde mevcuttur.
+Web sunucunuzu (Apache/Nginx) projenizin public dizinini belge kökü (document root) olarak işaretleyecek şekilde yapılandırın. .htaccess dosyası URL yeniden yazma için zaten public dizini içinde mevcuttur.
 
 Veritabanı Migration'larını Çalıştırın:
-
-Veritabanı tablolarınızı oluşturmak için CLI aracını kullanın:
+İlk veritabanı tablolarınızı oluşturmak için Lovesta CLI aracını kullanın:
 
 Bash
 
 php lovesta migrate
-Tebrikler! Lovesta Framework uygulamanız artık çalışmaya hazır. Tarayıcınızda uygulamanızın URL'sini ziyaret edebilirsiniz (örn. http://localhost/lovesta-app/public).
+🎉 Tebrikler! Lovesta Framework uygulamanız artık çalışmaya hazır. Tarayıcınızda uygulamanızın URL'sini ziyaret edebilirsiniz (örn. http://localhost/my-lovesta-app/public).
 
-3. Kullanım
+3. 💻 Kullanım
+Lovesta, geliştirme sürecinizi hızlandırmak için anlaşılır bir yapı ve sezgisel araçlar sunar.
+
 3.1. Uygulama Yapısı
-Lovesta'nın temel klasör yapısı, projenizi düzenli tutmanıza yardımcı olur:
+Lovesta'nın klasör yapısı, projenizi düzenli tutmanıza yardımcı olur:
 
 lovesta-framework/
 ├── app/                  # Uygulamanın çekirdek ve özel sınıfları
@@ -141,14 +146,13 @@ lovesta-framework/
 3.2. Rota Tanımlama
 Rota tanımları routes/web.php (web arayüzü) ve routes/api.php (API) dosyalarında yapılır.
 
-Örnek (routes/web.php):
-
 PHP
 
+// routes/web.php
 use App\Core\Http\Router;
-use App\Http\Controllers\WelcomeController; // Varsayılan controller'ınız varsa
+use App\Http\Controllers\WelcomeController;
 
-/** @var Router $router */
+/** @var Router $router */ // IDE desteği için
 
 // Basit GET rotası
 $router->get('/', [WelcomeController::class, 'index']);
@@ -164,13 +168,13 @@ $router->post('/contact', [App\Http\Controllers\ContactController::class, 'submi
 // Birden fazla HTTP metodu için
 $router->match(['GET', 'POST'], '/form', [App\Http\Controllers\FormController::class, 'handle']);
 3.3. Controller Oluşturma
-Controller'lar, istekleri işleyen sınıflardır. make:controller CLI komutunu kullanarak oluşturulurlar.
+Controller'lar, HTTP isteklerini işleyen ve bir Response nesnesi döndüren sınıflardır. make:controller CLI komutunu kullanarak hızla oluşturulabilirler.
 
 Bash
 
 php lovesta make:controller WelcomeController
-# Oluşturur: app/Http/Controllers/WelcomeController.php
-app/Http/Controllers/WelcomeController.php:
+# Oluşturulur: app/Http/Controllers/WelcomeController.php
+Örnek app/Http/Controllers/WelcomeController.php:
 
 PHP
 
@@ -180,29 +184,20 @@ namespace App\Http\Controllers;
 
 use App\Core\Http\Request;
 use App\Core\Http\Response;
-use App\Core\Helpers\ActionFilterHelper; // Eğer kullanacaksanız
+use App\Core\Helpers\ActionFilterHelper;
 
 class WelcomeController
 {
     public function index(Request $request, ActionFilterHelper $actionFilterHelper): Response
     {
-        // View'a gönderilecek veriler
-        $data = [
-            'pageTitle' => 'Hoş Geldiniz!',
-            'welcomeMessage' => 'Lovesta Framework ile tanışın.',
-            'actionFilterHelper' => $actionFilterHelper // Layout için helper'ı geçirin
-        ];
-
-        // İçerik view'ını yakala
         ob_start();
-        require APP_ROOT_PATH . '/resources/views/welcome.php'; // Sayfaya özel içeriği render et
+        require APP_ROOT_PATH . '/resources/views/welcome.php';
         $pageContent = ob_get_clean();
 
-        // Layout'u kullanarak Response nesnesi döndür
         return Response::view('resources/views/layouts/app.php', [
             'content' => $pageContent,
-            'pageTitle' => $data['pageTitle'],
-            'actionFilterHelper' => $actionFilterHelper // Layout da ActionFilterHelper'ı kullanabilir
+            'pageTitle' => 'Hoş Geldiniz!',
+            'actionFilterHelper' => $actionFilterHelper
         ]);
     }
 }
@@ -219,11 +214,21 @@ Eklenti Görünümleri: plugins/plugin_adi/views/
 
 plugins/slider/views/main_slider.php
 
-Görünüm Render Etme:
+Görünüm Render Etme Metotları:
 
-Response::view(string $viewPath, array $data = [], ...): Bir Response nesnesi döndürür. Genellikle Controller'lardan HTTP yanıtı olarak kullanılır. $viewPath için 'resources/views/welcome.php' veya 'plugins/home/views/home.php' gibi tam veya eklenti göreceli yol kullanılır.
+Response::view(string $viewPath, array $data = [], ...):
 
-Response::renderPartial(string $viewName, array $data = []): İçeriği doğrudan mevcut çıktı tamponuna (output buffer) basar (bir Response nesnesi döndürmez). Widget'lar, eklenti içerikleri veya layout içindeki parçalar için idealdir.
+Bir Response nesnesi döndürür.
+
+Genellikle Controller'lardan ana HTTP yanıtı olarak kullanılır.
+
+$viewPath için: 'resources/views/welcome.php' veya 'plugins/home/views/home.php' gibi tam veya eklenti göreceli yol kullanılır.
+
+Response::renderPartial(string $viewName, array $data = []):
+
+İçeriği doğrudan mevcut çıktı tamponuna (output buffer) basar (bir Response nesnesi döndürmez).
+
+Widget'lar, eklenti içerikleri veya layout içindeki parçalar için idealdir.
 
 $viewName için şu formatlar desteklenir:
 
@@ -231,23 +236,18 @@ $viewName için şu formatlar desteklenir:
 
 'resources/views/tam/yol/view_adı.php' (örn. 'resources/views/partials/header.php')
 
-'plugin_adı/views/view_adı.php' (eski plugin formatı)
+'plugin_adı/views/view_adı.php' (eski eklenti formatı)
 
 'view_adı' veya 'alt_klasör/view_adı' (varsayılan olarak resources/views/ altında arar)
 
-Örnek (resources/views/welcome.php):
+Örnek resources/views/welcome.php:
 
 PHP
 
 <h1><?php echo htmlspecialchars($welcomeMessage); ?></h1>
 <p>Bu, WelcomeController tarafından işlenen ana içeriktir.</p>
 
-<?php
-// Eğer bu sayfaya özel bir hook varsa
-if (isset($actionFilterHelper)) {
-    $actionFilterHelper->doAction('homepage_specific_area');
-}
-?>
+<?php if (isset($actionFilterHelper)) $actionFilterHelper->doAction('homepage_specific_area'); ?>
 3.5. Model ve Veritabanı Etkileşimi
 App\Core\Database\Model sınıfını genişleterek veritabanı tablolarınızla etkileşim kurun.
 
@@ -255,7 +255,7 @@ Bash
 
 php lovesta make:model Product
 # Oluşturur: app/Models/Product.php
-app/Models/Product.php:
+Örnek app/Models/Product.php:
 
 PHP
 
@@ -269,7 +269,6 @@ class Product extends Model
 {
     protected string $table = 'products'; // Modelin bağlı olduğu tablo adı
 
-    // İlişkiler veya özel sorgu metotları ekleyebilirsiniz
     public function getActiveProducts(): array
     {
         return $this->where('is_active', 1)->get();
@@ -281,32 +280,20 @@ PHP
 
 use App\Models\Product;
 
-// Tüm ürünleri al
-$products = Product::table()->get();
+$products = Product::table()->get(); // Tüm ürünleri al
+$product = Product::table()->where('id', 1)->first(); // ID'ye göre ürün bul
 
-// ID'ye göre ürün bul
-$product = Product::table()->where('id', 1)->first();
-
-// Yeni ürün ekle
-Product::table()->insert([
-    'name' => 'Yeni Ürün',
-    'price' => 29.99,
-    'is_active' => 1
-]);
-
-// Ürünü güncelle
-Product::table()->where('id', 1)->update(['price' => 34.99]);
-
-// Ürünü sil
-Product::table()->where('id', 1)->delete();
+Product::table()->insert(['name' => 'Yeni Ürün', 'price' => 29.99]); // Yeni ürün ekle
+Product::table()->where('id', 1)->update(['price' => 34.99]); // Ürünü güncelle
+Product::table()->where('id', 1)->delete(); // Ürünü sil
 3.6. Migration Kullanımı
 Veritabanı şema değişikliklerini yönetmek için make:migration komutunu kullanın.
 
 Bash
 
 php lovesta make:migration create_users_table
-# Oluşturur: database/migrations/YYYY_MM_DD_HHMMSS_create_users_table.php
-database/migrations/YYYY_MM_DD_HHMMSS_create_users_table.php:
+# Oluşturulur: database/migrations/YYYY_MM_DD_HHMMSS_create_users_table.php
+Örnek database/migrations/YYYY_MM_DD_HHMMSS_create_users_table.php:
 
 PHP
 
@@ -326,10 +313,6 @@ class CreateUsersTable extends AbstractMigration
             'created_at DATETIME DEFAULT CURRENT_TIMESTAMP',
             'updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'
         ]);
-        // İsteğe bağlı olarak başlangıç verileri ekleyebilirsiniz
-        $this->insert('users', [
-            ['name' => 'Admin User', 'email' => 'admin@example.com', 'password' => password_hash('password', PASSWORD_DEFAULT)],
-        ]);
     }
 
     public function down(): void
@@ -339,14 +322,14 @@ class CreateUsersTable extends AbstractMigration
 }
 Migration'ları çalıştırmak için: php lovesta migrate
 
-4. Eklenti Geliştirme
+4. 🔌 Eklenti Geliştirme
 Lovesta'nın eklenti sistemi, uygulamanızı modüler ve genişletilebilir hale getirir.
 
 4.1. Yeni Eklenti Oluşturma
 Bash
 
 php lovesta make:plugin MyBlog
-# Oluşturur: plugins/my_blog/ dizinini ve temel dosyaları.
+# Oluşturur: plugins/my_blog/ dizinini ve temel dosyalarını.
 Oluşturulduktan sonra, eklentinizi config/plugins.php dosyasına ekleyerek etkinleştirmeniz gerekir:
 
 PHP
@@ -357,11 +340,11 @@ return [
         'home',
         'slider',
         'footer',
-        'my_blog', // Yeni eklentinizi buraya ekleyin
+        'my_blog', # <-- Yeni eklentinizi buraya ekleyin
     ],
 ];
 4.2. Eklenti İçinde Bileşenler
-Eklentiler kendi Controller, Model, View, Service, Migration ve rota dosyalarına sahip olabilir. Bu dosyalar, eklentinizin kök dizini altındaki ilgili alt dizinlerde yer alır. Eklentinizdeki plugin.php dosyası, eklentinin başlatma noktasıdır ve rotalarınızı, servislerinizi ve aksiyon/filtrelerinizi burada kaydedersiniz.
+Eklentiler kendi Controller, Model, View, Service, Migration ve rota dosyalarına sahip olabilir. Eklentinizin plugin.php dosyası, başlatma noktasıdır ve rotalarınızı, servislerinizi, aksiyon/filtrelerinizi burada kaydedersiniz.
 
 4.3. Ortak Alanlara İçerik Ekleme (Action/Filter)
 Uygulamanızın layout'ları veya diğer görünümleri içinde tanımlanmış "action hook"larına eklentilerden içerik enjekte edebilirsiniz.
@@ -384,7 +367,7 @@ namespace MyHeaderPlugin;
 
 use App\Core\Http\Router;
 use App\Core\Helpers\ActionFilterHelper;
-use App\Core\Http\Response; // Response sınıfını kullanın
+use App\Core\Http\Response;
 use Psr\Container\ContainerInterface;
 
 return function (Router $router, ContainerInterface $container, ActionFilterHelper $actionFilter) {
@@ -393,34 +376,43 @@ return function (Router $router, ContainerInterface $container, ActionFilterHelp
         Response::renderPartial('my_header_plugin::main_header');
     });
 };
-Bu örnekte plugins/my_header_plugin/views/main_header.php dosyası header içeriğini barındıracaktır.
+(Bu örnekte plugins/my_header_plugin/views/main_header.php dosyası header içeriğini barındıracaktır.)
 
-5. CLI Komutları
+5. ⚙️ CLI Komutları
 Projenizin kök dizininden php lovesta komutuyla tüm CLI araçlarına erişebilirsiniz.
 
 php lovesta list : Tüm mevcut komutları listeler.
 
-php lovesta help [command] : Belirli bir komut hakkında yardım gösterir.
+php lovesta help [komut] : Belirli bir komut hakkında yardım gösterir.
 
 Örnek Komutlar:
 
-php lovesta make:controller MyNewController
+Bash
 
+# Yeni bir Controller oluşturma
+php lovesta make:controller UserController
+
+# Bir eklenti içinde Model oluşturma
 php lovesta make:model Order --plugin=Ecommerce
 
+# Yeni bir veritabanı migration dosyası oluşturma
 php lovesta make:migration create_products_table
 
+# Tüm bekleyen migration'ları çalıştırma
 php lovesta migrate
 
+# Son çalıştırılan migration grubunu geri alma
 php lovesta migrate:rollback
 
-6. Katkıda Bulunma
-Lovesta Framework'ü daha da iyi hale getirmek için katkılarınızı bekliyoruz! Lütfen aşağıdaki adımları izleyerek projenize katkıda bulunun:
+# Tüm tabloları silme ve migration'ları yeniden çalıştırma
+php lovesta migrate:fresh
+6. 🤝 Katkıda Bulunma
+Lovesta Framework'ü daha da iyi hale getirmek için katkılarınızı bekliyoruz! Geliştirmelerinizle projeyi zenginleştirmekten mutluluk duyarız. Lütfen aşağıdaki adımları izleyerek katkıda bulunun:
 
-Projenin kod stil kılavuzlarına uyun.
+Projenin kod stil kılavuzlarına uyun (henüz tanımlanmadıysa, PSR-12 gibi standartları hedefleyin).
 
-Yeni özellikler veya hata düzeltmeleri için testler yazın.
+Yeni özellikler veya hata düzeltmeleri için testler yazmaya özen gösterin.
 
 Değişikliklerinizi ayrı bir dalda (branch) geliştirin.
 
-Geliştirdiğiniz özelliği veya düzeltmeyi anlatan net bir Pull Request (PR) gönderin.
+Geliştirdiğiniz özelliği veya düzeltmeyi anlatan net ve kısa bir Pull Request (PR) gönderin.
