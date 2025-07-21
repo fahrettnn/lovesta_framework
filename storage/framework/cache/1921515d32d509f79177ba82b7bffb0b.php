@@ -1,0 +1,184 @@
+<?php
+return array (
+  0 => 
+  array (
+    'App\\Console\\Commands\\AbstractMakeCommand' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\lovesta-framework\\app\\Console\\Commands\\AbstractMakeCommand.php',
+      1 => 1751528410,
+    ),
+    'App\\Console\\Commands\\MakeControllerCommand' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\lovesta-framework\\app\\Console\\Commands\\MakeControllerCommand.php',
+      1 => 1751526997,
+    ),
+    'App\\Console\\Commands\\MakeMigrationCommand' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\lovesta-framework\\app\\Console\\Commands\\MakeMigrationCommand.php',
+      1 => 1751527047,
+    ),
+    'App\\Console\\Commands\\MakeModelCommand' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\lovesta-framework\\app\\Console\\Commands\\MakeModelCommand.php',
+      1 => 1751526990,
+    ),
+    'App\\Console\\Commands\\MakePluginCommand' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\lovesta-framework\\app\\Console\\Commands\\MakePluginCommand.php',
+      1 => 1751531708,
+    ),
+    'App\\Console\\Commands\\MakeServiceCommand' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\lovesta-framework\\app\\Console\\Commands\\MakeServiceCommand.php',
+      1 => 1751527027,
+    ),
+    'App\\Core\\Application' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\lovesta-framework\\app\\Core\\Application.php',
+      1 => 1751370792,
+    ),
+    'App\\Core\\Config' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\lovesta-framework\\app\\Core\\Config.php',
+      1 => 1750438837,
+    ),
+    'App\\Core\\Database\\Migration\\AbstractMigration' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\lovesta-framework\\app\\Core\\Database\\AbstractMigration.php',
+      1 => 1751048811,
+    ),
+    'App\\Core\\Database\\Connection' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\lovesta-framework\\app\\Core\\Database\\Connection.php',
+      1 => 1750966766,
+    ),
+    'App\\Core\\Database\\Migration' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\lovesta-framework\\app\\Core\\Database\\Migration.php',
+      1 => 1751050990,
+    ),
+    'App\\Core\\Database\\Model' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\lovesta-framework\\app\\Core\\Database\\Model.php',
+      1 => 1750966795,
+    ),
+    'App\\Core\\Exceptions\\Handler' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\lovesta-framework\\app\\Core\\Exceptions\\Handler.php',
+      1 => 1750441965,
+    ),
+    'App\\Core\\Exceptions\\PluginException' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\lovesta-framework\\app\\Core\\Exceptions\\PluginException.php',
+      1 => 1750442500,
+    ),
+    'App\\Core\\Exceptions\\UrlException' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\lovesta-framework\\app\\Core\\Exceptions\\UrlException.php',
+      1 => 1750442219,
+    ),
+    'App\\Core\\Helpers\\ActionFilterHelper' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\lovesta-framework\\app\\Core\\Helpers\\ActionFilterHelper.php',
+      1 => 1750442895,
+    ),
+    'App\\Core\\Helpers\\PluginHelper' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\lovesta-framework\\app\\Core\\Helpers\\PluginHelper.php',
+      1 => 1751358101,
+    ),
+    'App\\Core\\Http\\Kernel' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\lovesta-framework\\app\\Core\\Http\\Kernel.php',
+      1 => 1750955160,
+    ),
+    'App\\Core\\Http\\Request' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\lovesta-framework\\app\\Core\\Http\\Request.php',
+      1 => 1750447092,
+    ),
+    'App\\Core\\Http\\Response' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\lovesta-framework\\app\\Core\\Http\\Response.php',
+      1 => 1750447326,
+    ),
+    'App\\Core\\Http\\Router' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\lovesta-framework\\app\\Core\\Http\\Router.php',
+      1 => 1750441932,
+    ),
+    'Lov\\Controllers\\LovController' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\lovesta-framework\\plugins\\lov\\controllers\\LovController.php',
+      1 => 1751531735,
+    ),
+    'Lov\\Migrations\\Migrations\\Lov' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\lovesta-framework\\plugins\\lov\\migrations\\2025-07-03_103535_create_lov_table.php',
+      1 => 1751531735,
+    ),
+    'Lov\\Models\\LovModel' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\lovesta-framework\\plugins\\lov\\models\\LovModel.php',
+      1 => 1751531735,
+    ),
+    'Lov\\Services\\LovService' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\lovesta-framework\\plugins\\lov\\services\\LovService.php',
+      1 => 1751531735,
+    ),
+    'Test22\\Controllers\\Test22Controller' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\lovesta-framework\\plugins\\test22\\controllers\\Test22Controller.php',
+      1 => 1751489558,
+    ),
+    'Test22\\Migrations\\Test22Table' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\lovesta-framework\\plugins\\test22\\migrations\\2025-07-02_225238_create_test22_table.php',
+      1 => 1751489558,
+    ),
+    'Test22\\Models\\Test22Model' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\lovesta-framework\\plugins\\test22\\models\\Test22Model.php',
+      1 => 1751489558,
+    ),
+  ),
+  1 => 
+  array (
+  ),
+  2 => 
+  array (
+    'C:\\xampp\\htdocs\\lovesta-framework\\app\\Core\\Exceptions\\HookException.php' => 1750436043,
+    'C:\\xampp\\htdocs\\lovesta-framework\\app\\Core\\func.php' => 1750435792,
+    'C:\\xampp\\htdocs\\lovesta-framework\\app\\Core\\functions.php' => 1750435805,
+    'C:\\xampp\\htdocs\\lovesta-framework\\app\\Core\\Helpers\\TagsManager.php' => 1750436968,
+    'C:\\xampp\\htdocs\\lovesta-framework\\app\\Core\\Helpers\\UrlHelper.php' => 1750436963,
+    'C:\\xampp\\htdocs\\lovesta-framework\\app\\Core\\Helpers\\ViewHelper.php' => 1750436958,
+    'C:\\xampp\\htdocs\\lovesta-framework\\app\\Core\\init.php' => 1750438855,
+    'C:\\xampp\\htdocs\\lovesta-framework\\app\\Core\\Interfaces\\UrlHelperInterface.php' => 1750436949,
+    'C:\\xampp\\htdocs\\lovesta-framework\\app\\Core\\Services\\GoogleDrive\\GoogleDriveServiceMod.php' => 1750436933,
+    'C:\\xampp\\htdocs\\lovesta-framework\\app\\Core\\Services\\Mail\\MailService.php' => 1750436859,
+    'C:\\xampp\\htdocs\\lovesta-framework\\app\\Core\\Services\\Mail\\NetteMailService.php' => 1750436866,
+    'C:\\xampp\\htdocs\\lovesta-framework\\app\\Core\\Services\\Mail\\PhpMailerService.php' => 1750436872,
+    'C:\\xampp\\htdocs\\lovesta-framework\\app\\Core\\Services\\SecurityService.php' => 1750436922,
+    'C:\\xampp\\htdocs\\lovesta-framework\\app\\Core\\Services\\Session\\SessionService.php' => 1750436900,
+    'C:\\xampp\\htdocs\\lovesta-framework\\app\\Core\\Services\\UploadService.php' => 1750436915,
+    'C:\\xampp\\htdocs\\lovesta-framework\\app\\Providers\\AppServiceProvider.php' => 1750436771,
+    'C:\\xampp\\htdocs\\lovesta-framework\\app\\Providers\\DatabaseServiceProvider.php' => 1750436776,
+    'C:\\xampp\\htdocs\\lovesta-framework\\app\\Providers\\PluginServiceProvider.php' => 1750436782,
+    'C:\\xampp\\htdocs\\lovesta-framework\\app\\Support\\Arr.php' => 1750436803,
+    'C:\\xampp\\htdocs\\lovesta-framework\\app\\Support\\Collection.php' => 1750436791,
+    'C:\\xampp\\htdocs\\lovesta-framework\\app\\Support\\Str.php' => 1750436797,
+    'C:\\xampp\\htdocs\\lovesta-framework\\plugins\\lov\\plugin.php' => 1751531735,
+    'C:\\xampp\\htdocs\\lovesta-framework\\plugins\\lov\\views\\view.php' => 1751531735,
+    'C:\\xampp\\htdocs\\lovesta-framework\\plugins\\lov\\controllers\\LovController.php' => 1751531735,
+    'C:\\xampp\\htdocs\\lovesta-framework\\plugins\\lov\\models\\LovModel.php' => 1751531735,
+    'C:\\xampp\\htdocs\\lovesta-framework\\plugins\\lov\\migrations\\2025-07-03_103535_create_lov_table.php' => 1751531735,
+    'C:\\xampp\\htdocs\\lovesta-framework\\plugins\\lov\\services\\LovService.php' => 1751531735,
+    'C:\\xampp\\htdocs\\lovesta-framework\\plugins\\test22\\plugin.php' => 1751489558,
+    'C:\\xampp\\htdocs\\lovesta-framework\\plugins\\test22\\views\\view.php' => 1751489558,
+    'C:\\xampp\\htdocs\\lovesta-framework\\plugins\\test22\\controllers\\Test22Controller.php' => 1751489558,
+    'C:\\xampp\\htdocs\\lovesta-framework\\plugins\\test22\\models\\Test22Model.php' => 1751489558,
+    'C:\\xampp\\htdocs\\lovesta-framework\\plugins\\test22\\migrations\\2025-07-02_225238_create_test22_table.php' => 1751489558,
+  ),
+);

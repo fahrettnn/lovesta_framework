@@ -1,0 +1,16 @@
+<?php
+
+namespace {$PLUGIN_NAMESPACE}; // DÜZELTİLDİ
+
+class {$PLUGIN_CLASS_NAME} // DÜZELTİLDİ
+{
+    public function __construct()
+    {
+        // Servis başlatma mantığı buraya gelir.
+    }
+
+    public function doSomething(): string
+    {
+        return "This is a service method from {$PLUGIN_CLASS_NAME} in {$PLUGIN_NAMESPACE}.";
+    }
+}

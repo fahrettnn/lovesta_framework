@@ -1,0 +1,14 @@
+<?php
+
+namespace {$PLUGIN_NAMESPACE}; // DÜZELTİLDİ
+
+use App\Core\Http\Request;
+use App\Core\Http\Response;
+
+class {$PLUGIN_CLASS_NAME} // DÜZELTİLDİ
+{
+    public function index(Request $request): Response
+    {
+        return new Response("Hello from {$PLUGIN_CLASS_NAME} in {$PLUGIN_NAMESPACE}!");
+    }
+}

@@ -1,0 +1,29 @@
+<?php
+
+namespace {$PLUGIN_NAMESPACE};
+
+use App\Core\Http\Router;
+use App\Core\Helpers\ActionFilterHelper;
+use Psr\Container\ContainerInterface;
+// use {$PLUGIN_NAMESPACE}\\Controllers\\ExampleController;
+
+use function DI\autowire;
+
+if (!defined('{$PLUGIN_CONST_NAME}')) {
+    define('{$PLUGIN_CONST_NAME}', __DIR__);
+}
+
+return function (Router $router, ContainerInterface $container, ActionFilterHelper $actionFilter) {
+    /** @var \DI\Container \$container */
+
+    // Örnek servis kaydı:
+    // \$container->set({$PLUGIN_CONTROLLER_CLASS_NAME}::class, autowire({$PLUGIN_CONTROLLER_CLASS_NAME}::class));
+
+    // Örnek rota tanımı:
+    // \$router->get('/{$PLUGIN_SLUG}', [{$PLUGIN_CONTROLLER_CLASS_NAME}::class, 'index']);
+
+    // Örnek aksiyon/filtre kaydı:
+    // \$actionFilter->addAction('app_init', function() {
+    //     \$container->get(Psr\\Log\\LoggerInterface::class)->info("Plugin '{$PLUGIN_SLUG}' initialized!");
+    // });
+};

@@ -1,0 +1,24 @@
+<?php
+
+namespace {$PLUGIN_NAMESPACE}\Migrations;
+
+use App\Core\Database\Migration\AbstractMigration;
+
+class {$PLUGIN_MIGRATION_CLASS_NAME} extends AbstractMigration
+{
+    public function up(): void
+    {
+        // Örnek kullanım:
+        // \$this->addColumn('id INT AUTO_INCREMENT PRIMARY KEY');
+        // \$this->addColumn('name VARCHAR(255) NOT NULL');
+        // \$this->createTable('{$TABLE_NAME}'); // YENİ: Tablo adı placeholder'ı
+        // echo "Created '{$TABLE_NAME}' table.\\n";
+    }
+
+    public function down(): void
+    {
+        // Örnek kullanım:
+        // \$this->dropTable('{$TABLE_NAME}'); // YENİ: Tablo adı placeholder'ı
+        // echo "Dropped '{$TABLE_NAME}' table.\\n";
+    }
+}

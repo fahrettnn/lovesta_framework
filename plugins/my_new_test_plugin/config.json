@@ -1,0 +1,7 @@
+{
+    "name": "My New Test Plugin",
+    "description": "{$PLUGIN_DESCRIPTION}",
+    "version": "1.0.0",
+    "status": "active",
+    "author": "Your Name"
+}

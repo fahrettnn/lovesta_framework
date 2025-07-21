@@ -1,0 +1,76 @@
+#!/usr/bin/env php
+<?php
+
+// Framework'ün kök dizinini tanımla.
+// Bu dosya (lovesta), doğrudan kök dizinde olduğu için __DIR__ kök dizin olacaktır.
+define('APP_ROOT_PATH', __DIR__);
+
+// Bootstrap dosyasını APP_ROOT_PATH'i kullanarak dahil et
+// Bu, framework'ü başlatacak ve IoC Container'ı oluşturacaktır.
+$appInstance = require_once APP_ROOT_PATH . '/bootstrap/app.php';
+
+use App\Console\Commands\MakeControllerCommand;
+use App\Console\Commands\MakeMigrationCommand;
+use App\Console\Commands\MakeModelCommand;
+use Symfony\Component\Console\Application;
+use Symfony\Component\Console\Formatter\OutputFormatterStyle;
+use Symfony\Component\Console\Output\ConsoleOutput; // YENİ: ConsoleOutput sınıfını import et
+use Symfony\Component\Console\Output\OutputInterface; // Gerekli arayüzü import et
+use App\Console\Commands\MakePluginCommand; // Yeni make:plugin komutunu import et
+use App\Console\Commands\MakeServiceCommand;
+use App\Console\Commands\MigrateCommand;
+use Symfony\Component\Console\Input\ArgvInput;
+
+// use App\Console\Commands\MigrateCommand; // Migrate komutunu daha sonra ekleyeceğiz
+
+// Yeni bir Symfony Console uygulaması oluştur
+$application = new Application('Lovesta Framework CLI', '1.0.0');
+
+$output = new ConsoleOutput(); // <-- $output değişkenini kullanıyoruz
+$output->setDecorated(true); // ANSI çıktısını zorla etkinleştir
+
+// Hoş geldiniz tasarımı ve renkler için çıktı formatlayıcı ayarlarını
+// doğrudan $consoleOutput nesnesine uygulayın.
+// Stilleri doğrudan bu Output objesinin formatlayıcısına uygula
+$formatter = $output->getFormatter(); // OutputInterface'in kendi getFormatter() metodu
+$formatter->setStyle('lovesta_title', new OutputFormatterStyle('cyan', 'black', ['bold']));
+$formatter->setStyle('lovesta_version', new OutputFormatterStyle('yellow', 'black', ['bold']));
+$formatter->setStyle('lovesta_line', new OutputFormatterStyle('white', 'black', ['bold']));
+$formatter->setStyle('lovesta_prompt', new OutputFormatterStyle('green'));
+$formatter->setStyle('lovesta_info', new OutputFormatterStyle('blue'));
+$formatter->setStyle('lovesta_success', new OutputFormatterStyle('green', null, ['bold']));
+$formatter->setStyle('lovesta_warning', new OutputFormatterStyle('yellow'));
+$formatter->setStyle('lovesta_error', new OutputFormatterStyle('red', null, ['bold']));
+
+$input = new ArgvInput(); // Mevcut CLI girdisini al
+$commandName = $input->getFirstArgument(); // İlk argümanı al (komut adı)
+
+if ($commandName === null || $commandName === 'list' || $commandName === 'help') {
+    $output->writeln(''); // <-- DÜZELTİLDİ: $output kullanılıyor
+    $output->writeln('<lovesta_title>
+       __       ______   __     __  ________   ______ ________   ______  
+      |  \     /      \ |  \   |  \|        \ /      \        \ /      \ 
+      | $$    |  $$$$$$\| $$   | $$| $$$$$$$$|  $$$$$$\$$$$$$$$|  $$$$$$\
+      | $$    | $$  | $$| $$   | $$| $$__    | $$___\$$ | $$   | $$__| $$
+      | $$    | $$  | $$ \$$\ /  $$| $$  \    \$$    \  | $$   | $$    $$
+      | $$    | $$  | $$  \$$\  $$ | $$$$$    _\$$$$$$\ | $$   | $$$$$$$$
+      | $$____| $$__/ $$   \$$ $$  | $$_____ |  \__| $$ | $$   | $$  | $$
+      | $$     \$$    $$    \$$$   | $$     \ \$$    $$ | $$   | $$  | $$
+       \$$$$$$$$\$$$$$$      \$     \$$$$$$$$  \$$$$$$   \$$    \$$   \$$
+    </lovesta_title>');
+    $output->writeln('<lovesta_line>==============================================================================</lovesta_line>');
+    $output->writeln(sprintf('<lovesta_prompt>Welcome to Lovesta Framework CLI</lovesta_prompt> <lovesta_version>v%s</lovesta_version>', $application->getVersion()));
+    $output->writeln('<lovesta_line>==============================================================================</lovesta_line>');
+    $output->writeln('');
+}
+
+$application->add($appInstance->getContainer()->get(MakePluginCommand::class));
+$application->add($appInstance->getContainer()->get(MakeControllerCommand::class));
+$application->add($appInstance->getContainer()->get(MakeModelCommand::class));
+$application->add($appInstance->getContainer()->get(MakeServiceCommand::class));
+$application->add($appInstance->getContainer()->get(MakeMigrationCommand::class));
+
+$application->add($appInstance->getContainer()->get(MigrateCommand::class)); 
+
+
+$application->run($input, $output);
